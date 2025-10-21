@@ -25,8 +25,10 @@ Python（主に使用）、SQL、R、Java、Git/GitHub<br>
 Google Colab、Jupyter Notebook、VS Code、GCP（Google Cloud Platform）<br>
 
 ## その他
-・オブジェクト指向設計（Python、Java）<br>
-・Gitによるバージョン管理<br>
+- オブジェクト指向設計（Python、Java）
+- Gitによるバージョン管理
+- インターンブログ ：https://zenn.dev/neinc_tech/articles/b503162f1261f5
+
 
 ## アカウント
 - GitHub: [KoukiYamaguchi](https://github.com/KoukiYamaguchi)
