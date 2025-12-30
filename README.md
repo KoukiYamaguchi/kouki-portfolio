@@ -1,46 +1,59 @@
-# **Kouki Yamaguchi's Portfolio**
+# Portfolio Website
 
-こんにちは！山口晃基です。<br>
-中央大学 理工学部 ビジネスデータサイエンス学科 3年（2025年現在）で、データサイエンス分野を中心に学習・実践しています。インターン、個人プロジェクト、KaggleやAtCoderなどのコンペティションを通じて、以下のようなテーマ・プロジェクトに取り組んできました。<br>
+私の個人のポートフォリオサイトのソースコードです。
+TypeScript, HTML, CSS (Vanilla) を使用して構築し、GitHub Actions等のCI/CDを意識した構成にしています。
 
-## 主な取り組み・プロジェクト
-- **インターン** [社内ブログ](https://ne-inc.jp/blog/article/ne_internship_01/)
-  - **顧客データを用いた解約分析・セグメンテーション**<br>
-  解約率の高いセグメントを特定し、特徴量重要度から解約要因を分析。XGBoostやロジスティック回帰を比較し、説明力と汎化性能のバランスを検証。結果をレポート形式で社内共有。
-  - **売上データの時系列予測モデル構築とWebアプリによる可視化（Streamlit使用）**<br>
-  Prophetモデルを用いて売上を予測。可視化用Webアプリを開発し、非技術者でも施策効果を確認可能に。<br>[🔗解説記事（Zenn）はこちら](https://zenn.dev/neinc_tech/articles/b503162f1261f5)
-  - **施策効果の検証**<br>
-  キャンペーンの効果を統計解析で評価
-- **コンペなど**
-  - Kaggleでの機械学習コンペ参加・実践
-  - AtCoderでの競技プログラミング実践
+👉 **Live Demo:** [https://koukiyamaguchi.github.io/portfolio/](https://koukiyamaguchi.github.io/portfolio/)
 
-## 技術スタック
-- **言語**<br>
-  - Python
-  - TypeScript
-  - HTML・CSS
-  - R
-  - Java
-- **フレームワーク**
-  - Streamlit
-  - FastAPI
-- **機械学習**
-  - 勾配モデル<br>
-    XGBoost、LightGBM、RandomForest
-  - 回帰モデル<br>
-    一般化線形回帰、階層ベイズモデル
-  - 時系列モデル<br>
-    Prophet、SARIMA, BSTS
-  - その他の教師なし学習モデル<br>
-    主成分分析、クラスター分析
+## Tech Stack
 
-## 今後の目標・目指すエンジニア像
-機械学習とソフトウェアエンジニアリングの両立を強みとするエンジニアを目指しています。単にモデルを構築するだけでなく、設計・実装・テスト・運用までを一貫して担い、機械学習をプロダクトとして継続的に価値提供できるMLOps的なエンジニアとしての能力を磨いていきたいと考えています。
-そのために、アルゴリズムや統計的背景の理解に加えて、API設計、データ基盤、CI/CD、クラウド環境、監視・改善など、ソフトウェアエンジニアとして必要な技術を幅広く身につけることを重視しています。また、ユーザー視点を第一に考え、技術的に正しいだけでなく「使われ続ける」プロダクトを設計・実装できるエンジニアでありたいと考えています。
-将来的には、機械学習とエンジニアリングの橋渡し役としてチーム全体の生産性や品質を高め、技術選定や設計方針をリードできるテックリードとなることを目標としています。
+- **Frontend:** HTML5, CSS3, TypeScript
+- **Design:** Fully Responsive (Mobile/Desktop), Dark/Modern UI
+- **Build Tool:** npm, tsc (TypeScript Compiler)
+- **Infrastructure:** GitHub Pages
 
-## アカウント
-- GitHub: [KoukiYamaguchi](https://github.com/KoukiYamaguchi)
-- AtCoder:[Yamaguchi_Koki](https://atcoder.jp/users/Yamaguchi_Koki)
-- Kaggle:[Yamaguchi Kouki](https://www.kaggle.com/yamaguchikouki)
+## Features
+
+- **TypeScript Implementation:**
+  - 型安全性（Type Safety）を意識したDOM操作の実装
+  - 言語切り替え機能（日本語 ⇔ 英語）の状態管理
+- **Modern CSS:**
+  - CSS Variables (`:root`) による配色管理
+  - Flexbox & Grid Layout によるレスポンシブ対応
+  - CSS Animations によるマイクロインタラクション
+- **Security & UX:**
+  - メールアドレスの難読化とクリップボードコピー機能の実装
+
+## Directory Structure
+```text
+portfolio/
+├── index.html       # Entry point
+├── css/
+│   └── style.css    # Stylesheet
+├── src/
+│   └── main.ts      # TypeScript source
+├── js/
+│   └── main.js      # Compiled JavaScript (Generated)
+└── tsconfig.json    # TypeScript configuration
+```
+
+
+## Local Development
+
+このリポジトリをローカルで動かす手順です。
+
+```bash
+# 1. Clone the repository
+git clone [https://github.com/KoukiYamaguchi/portfolio.git](https://github.com/KoukiYamaguchi/portfolio.git)
+
+# 2. Install dependencies
+npm install
+
+# 3. Compile TypeScript
+npm run build
+
+# 4. Open index.html in your browser
+```
+
+## Author
+Koki Yamaguchi(email: yamaguchi.koki.dev@gmail.com)
