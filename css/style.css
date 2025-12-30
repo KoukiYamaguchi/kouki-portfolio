@@ -368,35 +368,91 @@ body.en-mode .lang-en {
 /* =========================================
    Responsive (Mobile)
    ========================================= */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 1001;
+}
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-primary);
+    transition: 0.3s;
+}
+
+/* モバイル用スタイル */
 @media (max-width: 768px) {
     .header-container {
-        padding: 0 15px;
+        padding: 0 20px;
     }
-    
+
+    .hamburger {
+        display: flex; /* スマホでのみ表示 */
+    }
+
+    /* メニューをスマホ用にスタイル変更 */
     .nav {
-        display: none; /* スマホでのメニュー実装は今回はシンプル化のため省略 */
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%; /* 最初は画面外（右）に隠す */
+        width: 70%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.98);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        padding-top: 80px;
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
     }
 
-    .hero-container {
-        flex-direction: column-reverse; /* 画像を上に */
-        text-align: center;
+    /* クラスがついた時だけ画面内に出す */
+    .nav.active {
+        right: 0;
     }
 
-    .hero-text h1 {
-        font-size: 1.8rem;
-    }
-    
-    .hero-links {
-        display: flex;
+    .nav ul {
         flex-direction: column;
-        gap: 10px;
-    }
-    
-    .hero-links a {
-        margin: 0;
+        align-items: center;
+        gap: 40px;
     }
 
-    .lang-switch {
-        margin-left: auto; /* 右寄せ */
+    .nav a {
+        font-size: 1.2rem;
     }
+
+    /* ハンバーガーが押された時の×印アニメーション */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
+
+.email-btn {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.email-btn:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3);
+}
+
+.email-btn:active {
+    transform: translateY(0);
 }

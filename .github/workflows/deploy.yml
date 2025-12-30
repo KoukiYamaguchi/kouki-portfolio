@@ -1,0 +1,54 @@
+name: Deploy Portfolio
+
+# いつ動くか？ -> mainブランチにpushされた時
+on:
+  push:
+    branches: ["main"]
+
+# 権限の設定（GitHub Pagesに書き込む許可）
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 具体的な仕事内容
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest # 最新のUbuntuサーバーを使う
+
+    steps:
+      # 1. コードを持ってくる
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Node.js (調理器具) をセットアップ
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: 'npm'
+
+      # 3. 必要なライブラリをインストール
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. TypeScriptをJavaScriptに変換 (ビルド)
+      - name: Build TypeScript
+        run: npx tsc
+
+      # 5. 公開設定 (GitHub Pages向けにアップロード準備)
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # 全ファイルをアップロード対象にする
+
+      # 6. 公開 (デプロイ)
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

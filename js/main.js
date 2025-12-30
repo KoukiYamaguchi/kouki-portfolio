@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // HTML要素の取得（型アサーションを使用）
     const langSwitch = document.getElementById('langSwitch');
     const body = document.body;
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+    const emailBtn = document.getElementById('emailBtn');
     // nullチェック（要素が存在しない場合のエラー防止）
     if (!langSwitch || !body) {
         console.error('必要な要素が見つかりません');
@@ -27,6 +30,36 @@ document.addEventListener('DOMContentLoaded', () => {
             enableEnglishMode(body, langSwitch);
         }
     });
+    if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        // メニューのリンクをクリックしたら自動で閉じる（UX向上）
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+    if (emailBtn) {
+        emailBtn.addEventListener('click', () => {
+            const user = 'yamaguchi.koki.dev';
+            const domain = 'gmail.com';
+            const email = `${user}@${domain}`;
+            navigator.clipboard.writeText(email).then(() => {
+                const originalText = emailBtn.innerText;
+                emailBtn.innerText = 'Copied!';
+                setTimeout(() => {
+                    emailBtn.innerText = originalText;
+                }, 2000);
+            }).catch(err => {
+                console.error('Copy failed', err);
+            });
+        });
+    }
 });
 /**
  * 英語モードを有効にする関数

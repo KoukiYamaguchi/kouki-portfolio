@@ -16,7 +16,7 @@
     <header class="header">
         <div class="container header-container">
             <div class="logo">K.Yamaguchi</div>
-            <nav class="nav">
+            <nav class="nav" id="navMenu">
                 <ul>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
@@ -24,6 +24,11 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <div class="hamburger" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="lang-switch" id="langSwitch">
                 <span class="active">JP</span> | <span>EN</span>
             </div>
@@ -38,8 +43,8 @@
                     <span class="lang-en">Bridging Data Science<br>& Software Engineering</span>
                 </h1>
                 <p>
-                    <span class="lang-jp">山口 晃基 / 中央大学 理工学部</span>
-                    <span class="lang-en">Kouki Yamaguchi / Chuo University</span>
+                    <span class="lang-jp">山口 晃基 / 中央大学 理工学部 ビジネスデータサイエンス学科</span>
+                    <span class="lang-en">Kouki Yamaguchi / Chuo University, Department of Data Science for Business Innovation</span>
                 </p>
                 <div class="hero-links">
                     <a href="https://github.com/KoukiYamaguchi" target="_blank">GitHub</a>
@@ -133,6 +138,21 @@
                         My long-term goal is to become a Tech Lead who can guide technical decisions and architectural design.
                     </span>
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content" style="text-align: center;">
+                <p style="margin-bottom: 20px;">
+                    <span class="lang-jp">ご質問等がございましたら、お気軽にご連絡ください。</span>
+                    <span class="lang-en">Please feel free to contact me for any inquiries or opportunities.</span>
+                </p>
+                <button id="emailBtn" class="email-btn">
+                    Copy Email Address
+                </button>
             </div>
         </div>
     </section>
