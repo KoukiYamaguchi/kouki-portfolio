@@ -1,0 +1,24 @@
+{
+  "name": "kouki-portfolio",
+  "version": "1.0.0",
+  "description": "こんにちは！山口晃基です。<br>\r 中央大学 理工学部 ビジネスデータサイエンス学科 3年（2025年現在）で、データサイエンス分野を中心に学習・実践しています。<br>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoukiYamaguchi/kouki-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KoukiYamaguchi/kouki-portfolio/issues"
+  },
+  "homepage": "https://github.com/KoukiYamaguchi/kouki-portfolio#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

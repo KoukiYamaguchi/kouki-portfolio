@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kouki Yamaguchi | Portfolio</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">K.Yamaguchi</div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="lang-switch" id="langSwitch">
+                <span class="active">JP</span> | <span>EN</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h1>
+                    <span class="lang-jp">データサイエンスと<br>エンジニアリングの架け橋へ</span>
+                    <span class="lang-en">Bridging Data Science<br>& Software Engineering</span>
+                </h1>
+                <p>
+                    <span class="lang-jp">山口 晃基 / 中央大学 理工学部</span>
+                    <span class="lang-en">Kouki Yamaguchi / Chuo University</span>
+                </p>
+                <div class="hero-links">
+                    <a href="https://github.com/KoukiYamaguchi" target="_blank">GitHub</a>
+                    <a href="https://atcoder.jp/users/Yamaguchi_Koki" target="_blank">AtCoder</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/kouki_canada.jpg" alt="Kouki Yamaguchi Profile">
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Internship Projects</h2>
+            <div class="project-grid">
+                
+                <article class="project-card">
+                    <div class="card-content">
+                        <h3>
+                            <span class="lang-jp">顧客データを用いた解約分析</span>
+                            <span class="lang-en">Churn Analysis & Segmentation</span>
+                        </h3>
+                        <p class="tech-tag">Python / XGBoost / Logistic Regression</p>
+                        <p class="description">
+                            <span class="lang-jp">解約率の高いセグメントを特定し、特徴量重要度から解約要因を分析。結果をレポート形式で社内共有し、施策立案に貢献しました。</span>
+                            <span class="lang-en">Identified high-churn segments and analyzed factors using feature importance. Validated model explainability and generalization performance.</span>
+                        </p>
+                        <a href="https://ne-inc.jp/blog/article/ne_internship_01/" target="_blank" class="card-link">More Details &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-content">
+                        <h3>
+                            <span class="lang-jp">売上予測モデルと可視化アプリ</span>
+                            <span class="lang-en">Sales Forecasting & Visualization App</span>
+                        </h3>
+                        <p class="tech-tag">Python / Prophet / Streamlit</p>
+                        <p class="description">
+                            <span class="lang-jp">Prophetを用いた時系列予測モデルを構築し、StreamlitでWebアプリ化。非技術者でも施策効果を直感的に確認できる環境を整備しました。</span>
+                            <span class="lang-en">Built a time-series forecasting model using Prophet and developed a visualization web app with Streamlit for non-technical stakeholders.</span>
+                        </p>
+                        <a href="https://zenn.dev/neinc_tech/articles/b503162f1261f5" target="_blank" class="card-link">More Details &rarr;</a>
+                    </div>
+                </article>
+
+                </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-list">
+                        <span>Python</span><span>TypeScript</span><span>HTML/CSS</span><span>R</span><span>SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Machine Learning</h3>
+                    <div class="skill-list">
+                        <span>XGBoost</span><span>LightGBM</span><span>Prophet</span><span>SARIMA</span><span>BSTS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Dev & Tools</h3>
+                    <div class="skill-list">
+                        <span>Streamlit</span><span>FastAPI</span><span>Git/GitHub</span><span>Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About & Goal</h2>
+            <div class="about-content">
+                <p>
+                    <span class="lang-jp">
+                        機械学習とソフトウェアエンジニアリングの両立を強みとするエンジニアを目指しています。
+                        単にモデルを構築するだけでなく、設計・実装・テスト・運用までを一貫して担い、継続的に価値提供できるMLOps的な能力を磨いています。
+                        将来的には、技術選定や設計方針をリードできるテックリードとなることを目標としています。
+                    </span>
+                    <span class="lang-en">
+                        I aim to be an engineer who bridges the gap between Machine Learning and Software Engineering.
+                        Beyond model building, I focus on the entire lifecycle—design, implementation, testing, and operation (MLOps)—to deliver continuous value.
+                        My long-term goal is to become a Tech Lead who can guide technical decisions and architectural design.
+                    </span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/KoukiYamaguchi" target="_blank">GitHub</a>
+                <a href="https://atcoder.jp/users/Yamaguchi_Koki" target="_blank">AtCoder</a>
+                <a href="https://www.kaggle.com/yamaguchikouki" target="_blank">Kaggle</a>
+            </div>
+            <p>&copy; 2025 Kouki Yamaguchi. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

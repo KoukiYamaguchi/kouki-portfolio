@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",       /* 新しめのJavaScriptに変換 */
+    "module": "commonjs",
+    "outDir": "./js",         /* 変換後のjsファイルを jsフォルダに出力 */
+    "rootDir": "./src",       /* 元のtsファイルは srcフォルダにある */
+    "strict": true            /* 厳格な型チェックを有効化（バグ防止） */
+  },
+  "include": ["src/**/*"]
+}
