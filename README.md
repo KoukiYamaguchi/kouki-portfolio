@@ -3,7 +3,7 @@
 私の個人のポートフォリオサイトのソースコードです。
 TypeScript, HTML, CSS (Vanilla) を使用して構築し、GitHub Actions等のCI/CDを意識した構成にしています。
 
-👉 **Live Demo:** [https://koukiyamaguchi.github.io/kouki-portfolio/](https://koukiyamaguchi.github.io/kouki-portfolio/)
+👉 **Live Demo:** [https://koki-ymgc.github.io/koki-portfolio/](https://koki-ymgc.github.io/koki-portfolio/)
 
 ## Tech Stack
 
