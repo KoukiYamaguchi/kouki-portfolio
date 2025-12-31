@@ -44,7 +44,7 @@ portfolio/
 
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/KoukiYamaguchi/portfolio.git](https://github.com/KoukiYamaguchi/portfolio.git)
+git clone [https://github.com/Koki-ymgc/koki-portfolio.git](https://github.com/Koki-ymgc/koki-portfolio.git)
 
 # 2. Install dependencies
 npm install
